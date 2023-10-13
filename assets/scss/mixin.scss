@@ -1,0 +1,28 @@
+@mixin flexStyle()
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin gridStyle($min, $max)
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, $max));
+}
+
+@mixin fontStyle($f-sz: 24px, $f-wght, $f-fam: "work-sans", $f-col)
+{
+    font-size: $f-sz;
+    font-weight: $f-wght;
+    font-family: $f-fam;
+    color: $f-col;
+}
+
+@mixin imageStyle($img-w, $pos-X, $pos-Y, $z-index)
+{
+    width: $img-w;
+    left: $pos-X;
+    transform: translateY($pos-Y);
+    z-index: $z-index;
+}

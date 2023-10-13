@@ -1,0 +1,625 @@
+@use './mixin.scss';
+@use './variables.scss' as var;
+
+// ################# GENERALS / RESETS ##################
+
+@font-face {
+    font-family: "work-sans";
+    src: url(./../font/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(./../font/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    overflow-x: hidden;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+img
+{
+    display: block;
+    max-width: 100%;
+}
+
+// ################# HERO SECTION ##################
+
+.hero_wrapper
+{
+    @include mixin.flexStyle();
+    background-color: black;
+    padding-inline: var.$body-padding;
+
+    .line
+    {
+        background-color: #656565c8;
+        width: 1px;
+        height: 148px;
+        margin-bottom: 40px;
+    }
+
+    .hero_body_text
+    {
+        @include mixin.flexStyle();
+        margin-bottom: 218px;
+
+        h1
+        {
+            @include mixin.fontStyle(4rem, 700, "inter", white);
+            text-transform: uppercase;
+            @include mixin.flexStyle();
+            width: 400px;
+
+            span
+            {
+                transform: translateY(-24px);
+                color: #000000;
+                text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px white;
+            }
+        }
+        
+        p
+        {
+            @include mixin.fontStyle(0.75rem, 400, "work-sans", white);
+            margin-bottom: 12px;
+        }
+
+        p:nth-of-type(2)
+        {
+            transform: translateY(-18px);
+        }
+
+    }
+
+    .nav_bar
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+
+        .logo
+        {
+            width: 42px;
+        }
+
+        a:nth-of-type(2)
+        {
+            @include mixin.fontStyle(1.25rem, 300, "work-sans", white);
+            border: 1px solid white;
+            padding: 12px 32px;
+        }
+    }
+}
+
+// ################# MAIN SECTION ##################
+
+.main_wrapper
+{
+    position: relative;
+    z-index: 1;
+    // --------------------------------------
+    // 
+    // INTRO / FACTS 
+    // 
+    // --------------------------------------
+
+    .intro_section
+    {
+        background-color: black;
+        padding-inline: var.$body-padding;
+        padding-top: 124px;
+
+        .intro_text
+        {
+            @include mixin.fontStyle(6.125rem, 700, "inter", white);
+            line-height: 113%;
+            letter-spacing: -2.4px;
+            max-width: 1080px;
+            margin-bottom: 108px;
+        }
+
+        .facts_section
+        {
+            display: flex;
+            flex-wrap: wrap;
+            p
+            {
+                position: relative;
+                z-index: 1;
+                @include mixin.fontStyle(6.125rem, 700, "inter", white);
+                
+                &:nth-of-type(odd)
+                {
+                    @include mixin.fontStyle(0.875rem, 400, "work-sans", white);
+                    padding-bottom: 12px;
+                }
+
+                &:nth-of-type(even)
+                {
+                    padding-bottom: 24px;
+                }
+
+
+            }
+
+            img
+            {
+                position: relative;
+                width: 448px;
+                transform: translateY(-100px);
+                left: 20vw;
+                z-index: 0;
+            }
+
+            
+        }
+
+    }
+
+    // --------------------------------------
+    // 
+    // PRODUCT INFO 
+    // 
+    // --------------------------------------
+
+    .product_info_wrapper
+    {
+        padding-inline: var.$body-padding;
+        padding-top: 410px;
+        padding-bottom: 310px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: 679px;
+        background-color: #EEEEEE;
+
+        div
+        {
+            align-self: center;
+        }
+
+        div:nth-of-type(1)
+        {
+            h2
+            {
+                @include mixin.fontStyle(5.125rem, 700, "inter", black);
+                line-height: 98%;
+                letter-spacing: -1.24px;
+                max-width: 447px;
+                margin-bottom: 16px;
+            }
+
+            p
+            {
+                @include mixin.fontStyle(1rem, 400, "work-sans", black);
+                line-height: 187%;
+                letter-spacing: -0.4px;
+                max-width: 411px;
+            }
+
+            
+        }
+
+        div:nth-of-type(2)
+        {
+            p
+            {
+                @include mixin.fontStyle(1rem, 400, "work-sans", black);
+                line-height: 187%;
+                letter-spacing: -0.4px;
+                max-width: 411px;
+            }
+        }
+
+        // --------------------------------------
+        // 
+        // ACTION IMAGES
+        // 
+        // --------------------------------------
+
+        img
+        {
+            width: 400px;
+            position: absolute;
+
+            &:nth-of-type(1)
+            {
+                @include mixin.imageStyle(329px, 65vw, -485px, 0);
+            }
+
+            &:nth-of-type(2)
+            {
+                @include mixin.imageStyle(274px, 4vw, -100px, 0);
+            }
+
+            &:nth-of-type(3)
+            {
+                @include mixin.imageStyle(274px, 77vw, 250px, 0);
+            }
+
+            &:nth-of-type(4)
+            {
+                @include mixin.imageStyle(329px, 20vw, 500px, 0);
+            }
+
+            &:nth-of-type(5)
+            {
+                @include mixin.imageStyle(329px, 60vw, 650px, 0);
+            }
+
+            &:nth-of-type(6)
+            {
+                @include mixin.imageStyle(274px, 0vw, 950px, 0);
+            }
+
+            &:nth-of-type(7)
+            {
+                @include mixin.imageStyle(438px, 52vw, 1220px, 0);
+            }
+        }
+    }
+
+    // --------------------------------------
+    // 
+    // DESIGN STORY 
+    // 
+    // --------------------------------------
+
+        
+    .design_story_wrapper
+    {
+        background-color: #000000;
+        padding-inline: var.$body-padding;
+        padding-top: 20vh;
+        position: relative;
+        z-index: 1;
+
+        .design_story
+        {
+            @include mixin.gridStyle(450px, 1fr);
+
+            div
+            {
+                p
+                {
+                    @include mixin.fontStyle(1.125rem, 400, "work-sans", white);
+                    margin-bottom: 3vh; 
+                    span
+                    {
+                        letter-spacing: -3px;
+                    }
+                    }
+                    h2
+                    {
+                        @include mixin.fontStyle(5.125rem, 700, "inter", white);
+                        line-height: 92%;
+                        max-width: 300px;
+                    }
+
+                    &:nth-of-type(2)
+                    {
+                        max-width: 520px;
+                        p:nth-of-type(1)
+                        {
+                            padding-top: 55px;
+                            @include mixin.fontStyle(1.75rem, 700, "inter", white);
+                            line-height: 113%;
+                            letter-spacing: -0.4px;
+                        }
+                    }
+            }
+        }
+
+        .design_image_wrapper
+        {
+            display: flex;
+            flex-wrap: wrap;
+            
+            img
+            {
+
+                &:nth-of-type(1)
+                {
+                    width: 52vw;
+                    transform: translateY(200px);
+
+                }
+
+                &:nth-of-type(2)
+                {
+
+                    @include mixin.imageStyle(27vw, 55vw, 38vh, 1);
+                    position: absolute;
+                }
+            }
+        }
+
+    }
+
+    // --------------------------------------
+    // 
+    // ROTATION ANIMATION 
+    // 
+    // --------------------------------------
+
+    .animation_rotation_wrapper
+    {
+        position: relative;
+        height: 50vh;
+        img 
+        {
+            position: absolute;
+            width: 35vw;
+            z-index: 0;
+            top: -30%;
+            left: 75vw;
+            animation-name: rotation;
+            animation-timing-function: linear;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        }
+
+        @keyframes rotation 
+        {
+            0%
+            {
+                transform: rotate(-360deg);
+                transform-origin: center;
+            }
+            
+            100%
+            {
+                transform: rotate(360deg);
+                transform-origin: center;
+            }
+        }
+    }
+
+
+    // --------------------------------------
+    // 
+    // SECOND DESIGN STORY 
+    // 
+    // --------------------------------------
+
+    .second_design_story
+    {
+        background-color: #EEEEEE;
+        position: relative;
+        z-index: 0;
+
+        .design_story 
+        {
+            margin-bottom: 30vh;
+            div
+            {
+                div 
+                {
+                    p
+                    {
+                        color: black;
+                    }
+                    
+                    h2
+                    {
+                        color: #000000;
+                    }
+                }
+
+                &:nth-of-type(2)
+                {
+
+                    p:nth-of-type(1)
+                    {
+                        color: black;
+                    }
+
+                    p
+                    {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+        .design_image_wrapper
+        {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            padding-bottom: 40px;
+            
+            
+            img
+            {
+
+                &:nth-of-type(1)
+                {
+                    width: 52vw;
+                    position: relative;
+                    transform: translateY(-30px);
+                    left: 30vw;
+
+                }
+
+                &:nth-of-type(2)
+                {
+
+                    @include mixin.imageStyle(27vw, 11vw, 15vh, 1);
+                    position: absolute;
+                }
+            }
+        }
+
+    }
+}
+
+// ################# FOOTER SECTION ##################
+
+.footer_wrapper
+{
+    background-color: black;
+    padding-top: 10vh;
+    padding-bottom: 5%;
+    padding-inline: var.$body-padding;
+    overflow: hidden;
+
+    .footer_text_animation
+    {
+        // margin-bottom: 56px;
+        position: relative;
+
+        .join_link
+        {
+            display: block;
+            @include mixin.fontStyle(0.75rem, 400, "work-sans", white);
+            margin-bottom: 24px;
+        }
+
+        .footer_button
+        {
+            @include mixin.fontStyle(1.25rem, 300, "work-sans", white);
+            border: 1px solid white;
+            padding: 12px 32px;
+            width: 116px;
+            display: block;
+
+        }
+
+        p
+        {
+            @include mixin.fontStyle(24px, 400, "inter", white);
+            line-height: 194%;
+            max-width: 480px;
+            margin-bottom: 18px;
+        }
+
+        .scrolling_text
+        {
+            background-color: white;
+            position: absolute;
+            width: 2500px;
+            left: -3vw;
+            bottom: 0;
+            transform: rotate(45deg);
+            z-index: 0;
+            
+            p
+            {
+                animation: scroll 5s linear 0s infinite alternate;
+            }
+
+            @keyframes scroll 
+            {
+                0%
+                {
+                    transform: translateX(-500px);  
+                }
+
+                100%
+                {
+                    transform: translateX(500px);  
+                }
+                
+            }
+            
+            div
+            {
+                padding-top: 22px;
+                height: 100px;
+                display: flex;
+                gap: 20px;
+                p
+                {
+                    @include mixin.fontStyle(5.125rem, 700, "inter", black);
+                    text-wrap: nowrap;
+                    line-height: 50px;
+
+                    &:nth-of-type(odd)
+                    {
+                        color: #ffffff;
+                        text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0);
+                    }
+                }
+            }
+        }
+
+        .contact_sponsors_wrapper
+        {
+            display: flex;
+            justify-content: space-between;
+            color: white;
+            transform: translateY(100px);
+
+            div p
+            {
+                @include mixin.fontStyle(0.75rem, 400, "work-sans", white);
+            }
+
+            div
+            {
+                a img
+                {
+                    width: 20px;
+                }
+
+                &:nth-of-type(2)
+                {
+                    padding-right: 140px;
+                    display: flex;
+                    gap: 10px;
+                    align-items: baseline;
+                    a img
+                    {
+                        width: 50px;
+                    }
+                }
+
+                div
+                {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 20px;
+
+                }
+
+            }
+
+            .contact_links
+            {
+                margin-bottom: 100px;
+                div:nth-of-type(2)
+                {
+                    display: block;
+                }
+            }
+
+        }
+
+    }
+
+    
+}
+
+
+
+
+
