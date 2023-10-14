@@ -33,17 +33,17 @@ img {
   background-color: black;
   padding-inline: 8%;
 }
-.hero_wrapper .line {
+.hero_wrapper .vertical_line {
   background-color: rgba(101, 101, 101, 0.7843137255);
   width: 1px;
-  height: 148px;
-  margin-bottom: 40px;
+  height: 15vh;
+  margin-bottom: 5vh;
 }
 .hero_wrapper .hero_body_text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 218px;
+  margin-bottom: 32vh;
 }
 .hero_wrapper .hero_body_text h1 {
   font-size: 4rem;
@@ -54,7 +54,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  max-width: 400px;
 }
 .hero_wrapper .hero_body_text h1 span {
   transform: translateY(-24px);
@@ -97,7 +97,7 @@ img {
 .main_wrapper .intro_section {
   background-color: black;
   padding-inline: 8%;
-  padding-top: 124px;
+  padding-top: 14vh;
 }
 .main_wrapper .intro_section .intro_text {
   font-size: 6.125rem;
@@ -254,10 +254,8 @@ img {
   line-height: 92%;
   max-width: 300px;
 }
-.main_wrapper .design_story_wrapper .design_story div:nth-of-type(2) {
-  max-width: 520px;
-}
 .main_wrapper .design_story_wrapper .design_story div:nth-of-type(2) p:nth-of-type(1) {
+  word-wrap: break-word;
   padding-top: 55px;
   font-size: 1.75rem;
   font-weight: 700;
@@ -265,6 +263,7 @@ img {
   color: white;
   line-height: 113%;
   letter-spacing: -0.4px;
+  width: 86%;
 }
 .main_wrapper .design_story_wrapper .design_image_wrapper {
   display: flex;
@@ -277,19 +276,19 @@ img {
 .main_wrapper .design_story_wrapper .design_image_wrapper img:nth-of-type(2) {
   width: 27vw;
   left: 55vw;
-  transform: translateY(38vh);
+  transform: translateY(45vh);
   z-index: 1;
   position: absolute;
 }
 .main_wrapper .animation_rotation_wrapper {
   position: relative;
-  height: 50vh;
+  height: 55vh;
 }
 .main_wrapper .animation_rotation_wrapper img {
   position: absolute;
   width: 35vw;
   z-index: 0;
-  top: -30%;
+  top: -40%;
   left: 75vw;
   animation-name: rotation;
   animation-timing-function: linear;
@@ -398,10 +397,10 @@ img {
 }
 @keyframes scroll {
   0% {
-    transform: translateX(-500px);
+    transform: translateX(-300px);
   }
   100% {
-    transform: translateX(500px);
+    transform: translateX(300px);
   }
 }
 .footer_wrapper .footer_text_animation .scrolling_text div {

@@ -45,25 +45,26 @@ img
     background-color: black;
     padding-inline: var.$body-padding;
 
-    .line
+    .vertical_line
     {
         background-color: #656565c8;
         width: 1px;
-        height: 148px;
-        margin-bottom: 40px;
+        height: 15vh;
+        margin-bottom: 5vh;
     }
 
     .hero_body_text
     {
         @include mixin.flexStyle();
-        margin-bottom: 218px;
+        // margin-bottom: 218px;
+        margin-bottom: 32vh;
 
         h1
         {
             @include mixin.fontStyle(4rem, 700, "inter", white);
             text-transform: uppercase;
             @include mixin.flexStyle();
-            width: 400px;
+            max-width: 400px;
 
             span
             {
@@ -124,7 +125,7 @@ img
     {
         background-color: black;
         padding-inline: var.$body-padding;
-        padding-top: 124px;
+        padding-top: 14vh;
 
         .intro_text
         {
@@ -315,13 +316,15 @@ img
 
                     &:nth-of-type(2)
                     {
-                        max-width: 520px;
+                        
                         p:nth-of-type(1)
                         {
+                            word-wrap: break-word;
                             padding-top: 55px;
                             @include mixin.fontStyle(1.75rem, 700, "inter", white);
                             line-height: 113%;
                             letter-spacing: -0.4px;
+                            width: 86%;
                         }
                     }
             }
@@ -345,7 +348,7 @@ img
                 &:nth-of-type(2)
                 {
 
-                    @include mixin.imageStyle(27vw, 55vw, 38vh, 1);
+                    @include mixin.imageStyle(27vw, 55vw, 45vh, 1);
                     position: absolute;
                 }
             }
@@ -362,13 +365,13 @@ img
     .animation_rotation_wrapper
     {
         position: relative;
-        height: 50vh;
+        height: 55vh;
         img 
         {
             position: absolute;
             width: 35vw;
             z-index: 0;
-            top: -30%;
+            top: -40%;
             left: 75vw;
             animation-name: rotation;
             animation-timing-function: linear;
@@ -392,7 +395,6 @@ img
             }
         }
     }
-
 
     // --------------------------------------
     // 
@@ -484,7 +486,6 @@ img
 
     .footer_text_animation
     {
-        // margin-bottom: 56px;
         position: relative;
 
         .join_link
@@ -531,12 +532,12 @@ img
             {
                 0%
                 {
-                    transform: translateX(-500px);  
+                    transform: translateX(-300px);  
                 }
 
                 100%
                 {
-                    transform: translateX(500px);  
+                    transform: translateX(300px);  
                 }
                 
             }
