@@ -353,10 +353,10 @@ img {
   padding-inline: 8%;
   overflow: hidden;
 }
-.footer_wrapper .footer_text_animation {
+.footer_wrapper .footer_info_animation_wrapper {
   position: relative;
 }
-.footer_wrapper .footer_text_animation .join_link {
+.footer_wrapper .footer_info_animation_wrapper a {
   display: block;
   font-size: 0.75rem;
   font-weight: 400;
@@ -364,7 +364,7 @@ img {
   color: white;
   margin-bottom: 24px;
 }
-.footer_wrapper .footer_text_animation .footer_button {
+.footer_wrapper .footer_info_animation_wrapper .footer_button {
   font-size: 1.25rem;
   font-weight: 300;
   font-family: "work-sans";
@@ -374,7 +374,7 @@ img {
   width: 116px;
   display: block;
 }
-.footer_wrapper .footer_text_animation p {
+.footer_wrapper .footer_info_animation_wrapper p {
   font-size: 24px;
   font-weight: 400;
   font-family: "inter";
@@ -383,7 +383,7 @@ img {
   max-width: 480px;
   margin-bottom: 18px;
 }
-.footer_wrapper .footer_text_animation .scrolling_text {
+.footer_wrapper .footer_info_animation_wrapper .scrolling_text {
   background-color: white;
   position: absolute;
   width: 2500px;
@@ -392,24 +392,24 @@ img {
   transform: rotate(45deg);
   z-index: 0;
 }
-.footer_wrapper .footer_text_animation .scrolling_text p {
-  animation: scroll 5s linear 0s infinite alternate;
+.footer_wrapper .footer_info_animation_wrapper .scrolling_text p {
+  animation: scroll 3s linear 0s infinite alternate;
 }
 @keyframes scroll {
   0% {
     transform: translateX(-300px);
   }
   100% {
-    transform: translateX(300px);
+    transform: translateX(100px);
   }
 }
-.footer_wrapper .footer_text_animation .scrolling_text div {
+.footer_wrapper .footer_info_animation_wrapper .scrolling_text div {
   padding-top: 22px;
   height: 100px;
   display: flex;
   gap: 20px;
 }
-.footer_wrapper .footer_text_animation .scrolling_text div p {
+.footer_wrapper .footer_info_animation_wrapper .scrolling_text div p {
   font-size: 5.125rem;
   font-weight: 700;
   font-family: "inter";
@@ -417,43 +417,40 @@ img {
   text-wrap: nowrap;
   line-height: 50px;
 }
-.footer_wrapper .footer_text_animation .scrolling_text div p:nth-of-type(odd) {
+.footer_wrapper .footer_info_animation_wrapper .scrolling_text div p:nth-of-type(odd) {
   color: #ffffff;
   text-shadow: -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0);
 }
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper {
+.footer_wrapper .contact_sponsors_wrapper {
   display: flex;
   justify-content: space-between;
   color: white;
   transform: translateY(100px);
 }
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper div p {
+.footer_wrapper .contact_sponsors_wrapper div p {
   font-size: 0.75rem;
   font-weight: 400;
   font-family: "work-sans";
   color: white;
 }
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper div a img {
+.footer_wrapper .contact_sponsors_wrapper div a img {
   width: 20px;
 }
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper div:nth-of-type(2) {
-  padding-right: 140px;
+.footer_wrapper .contact_sponsors_wrapper div:nth-of-type(2) {
+  padding-right: 10vh;
   display: flex;
   gap: 10px;
   align-items: baseline;
 }
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper div:nth-of-type(2) a img {
+.footer_wrapper .contact_sponsors_wrapper div:nth-of-type(2) a img {
   width: 50px;
 }
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper div div {
+.footer_wrapper .contact_sponsors_wrapper div div {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
 }
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper .contact_links {
-  margin-bottom: 100px;
-}
-.footer_wrapper .footer_text_animation .contact_sponsors_wrapper .contact_links div:nth-of-type(2) {
+.footer_wrapper .contact_sponsors_wrapper div div:nth-of-type(2) {
   display: block;
 }
 

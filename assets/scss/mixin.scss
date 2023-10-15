@@ -26,3 +26,10 @@
     transform: translateY($pos-Y);
     z-index: $z-index;
 }
+
+@mixin mediaImageStyle($img-w, $pos-X, $pos-Y)
+{
+    width: $img-w;
+    left: $pos-X;
+    transform: translateY($pos-Y);
+}

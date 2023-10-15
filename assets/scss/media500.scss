@@ -1,0 +1,190 @@
+@use './mixin.scss';
+
+@media screen and (max-width: 500px) 
+{
+    //-------------------------------
+    // 
+    // HEADER / HERO SECTION
+    // 
+    //-------------------------------
+
+    .hero_wrapper
+    {
+        .hero_body_text h1
+        {
+            font-size: 3rem;
+        }
+    }
+
+    
+
+    .main_wrapper
+    {
+
+        //-------------------------------
+        // 
+        // MAIN / INTRO SECTION
+        // 
+        //-------------------------------
+
+        .intro_section
+        {
+            .intro_text
+            {
+                font-size: 4.125rem;
+            }
+        }
+
+        .facts_section
+        {
+            p:nth-of-type(even)
+            {
+                font-size: 4.125rem;
+            }
+        }
+
+        //-------------------------------
+        // 
+        // MAIN / ACTION IMAGES
+        // 
+        //-------------------------------
+        
+        .product_info_wrapper
+        {
+            img 
+            {
+                &:nth-of-type(1)
+                {
+                    @include mixin.mediaImageStyle(70%, 10vw, -500px);
+                }
+
+                &:nth-of-type(2)
+                {
+                    @include mixin.mediaImageStyle(70%, 10vw, -250px);
+                }
+
+                &:nth-of-type(3)
+                {
+                    @include mixin.mediaImageStyle(73%, 8vw, 398px);
+                }
+
+                &:nth-of-type(4)
+                {
+                    @include mixin.mediaImageStyle(63%, 29vw, 515px);
+                }
+
+                &:nth-of-type(5)
+                {
+                    @include mixin.mediaImageStyle(45%, 40vw, 743px);
+                        z-index: 1;
+                }
+
+                &:nth-of-type(6)
+                {
+                    @include mixin.mediaImageStyle(63%, 8vw, 815px);
+                }
+
+                &:nth-of-type(7)
+                {
+                    @include mixin.mediaImageStyle(85%, 8vw, 1308px);
+                }
+                
+            }
+        }
+
+        //-------------------------------
+        // 
+        // MAIN / DESIGN STORY
+        // 
+        //-------------------------------
+
+        .design_story_wrapper
+        {
+            .design_story
+            {
+                div:nth-of-type(2)
+                {
+                    p:nth-of-type(1)
+                    {
+                        width: 70%;
+                    }
+                }
+            }
+
+            .design_image_wrapper
+            {
+                img:nth-of-type(1)
+                {
+                    width: 90vh;
+                    transform: translateY(60px);
+                }
+
+                img:nth-of-type(2)
+                {
+                    width: 50vw;
+                    left: 15vw;
+                    transform: translateY(40vh);
+                }
+            }
+        }
+
+        .animation_rotation_wrapper 
+        {
+            img 
+            {
+                width: 82vw;
+                top: 9%;
+                left: 45vw;
+            }
+        }
+
+        .second_design_story
+        {
+            .second_image_wrapper
+            {
+                img:nth-of-type(1) 
+                {
+                    width: 90vw;
+                    transform: translateY(-192px);
+                    left: 0;
+                }
+
+                img:nth-of-type(2) 
+                {
+                    width: 50vw;
+                    left: 27vw;
+                    transform: translateY(20vh);
+                }
+            }
+        }
+    }
+
+    //-------------------------------
+    // 
+    // FOOTER / ANIMATION
+    // 
+    //-------------------------------
+
+    .footer_wrapper
+    {
+        .footer_info_animation_wrapper
+        {
+            .scrolling_text
+            {
+                width: 1000px;
+                left: -8vw;
+                bottom: 18%;
+                transform: rotate(0deg);
+
+                div 
+                {
+                    padding-top: 11px;
+                    height: 70px;
+
+                    p {
+                        font-size: 1.75rem;}
+                }
+            }
+        }
+    } 
+}

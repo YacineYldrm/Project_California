@@ -1,7 +1,11 @@
 @use './mixin.scss';
 @use './variables.scss' as var;
 
-// ################# GENERALS / RESETS ##################
+// #######################################
+//
+// GENERALS / RESETS
+// 
+// ####################################### 
 
 @font-face {
     font-family: "work-sans";
@@ -37,7 +41,11 @@ img
     max-width: 100%;
 }
 
-// ################# HERO SECTION ##################
+// #######################################
+//
+// HERO SECTION
+// 
+// ####################################### 
 
 .hero_wrapper
 {
@@ -109,7 +117,11 @@ img
     }
 }
 
-// ################# MAIN SECTION ##################
+// #######################################
+//
+// MAIN SECTION
+// 
+// ####################################### 
 
 .main_wrapper
 {
@@ -358,7 +370,7 @@ img
 
     // --------------------------------------
     // 
-    // ROTATION ANIMATION 
+    // ANIMATION: ROTATION
     // 
     // --------------------------------------
 
@@ -474,7 +486,11 @@ img
     }
 }
 
-// ################# FOOTER SECTION ##################
+// #######################################
+//
+// FOOTER SECTION
+// 
+// ####################################### 
 
 .footer_wrapper
 {
@@ -484,11 +500,11 @@ img
     padding-inline: var.$body-padding;
     overflow: hidden;
 
-    .footer_text_animation
+    .footer_info_animation_wrapper
     {
         position: relative;
 
-        .join_link
+        a
         {
             display: block;
             @include mixin.fontStyle(0.75rem, 400, "work-sans", white);
@@ -502,7 +518,6 @@ img
             padding: 12px 32px;
             width: 116px;
             display: block;
-
         }
 
         p
@@ -512,6 +527,12 @@ img
             max-width: 480px;
             margin-bottom: 18px;
         }
+
+        // --------------------------------------
+        // 
+        // ANIMATION: SCROLLING TEXT
+        // 
+        // --------------------------------------
 
         .scrolling_text
         {
@@ -525,7 +546,7 @@ img
             
             p
             {
-                animation: scroll 5s linear 0s infinite alternate;
+                animation: scroll 3s linear 0s infinite alternate;
             }
 
             @keyframes scroll 
@@ -537,7 +558,7 @@ img
 
                 100%
                 {
-                    transform: translateX(300px);  
+                    transform: translateX(100px);  
                 }
                 
             }
@@ -563,61 +584,57 @@ img
             }
         }
 
-        .contact_sponsors_wrapper
-        {
-            display: flex;
-            justify-content: space-between;
-            color: white;
-            transform: translateY(100px);
+    }
 
-            div p
+    .contact_sponsors_wrapper
+    {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        transform: translateY(100px);
+
+        div p
+        {
+            @include mixin.fontStyle(0.75rem, 400, "work-sans", white);
+        }
+
+        div
+        {
+            a 
             {
-                @include mixin.fontStyle(0.75rem, 400, "work-sans", white);
+                img
+                {
+                    width: 20px;
+                }
+                
+            }
+
+            &:nth-of-type(2)
+            {
+                padding-right: 10vh;
+                display: flex;
+                gap: 10px;
+                align-items: baseline;
+
+                a img
+                {
+                    width: 50px;
+                }
             }
 
             div
             {
-                a img
-                {
-                    width: 20px;
-                }
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
 
                 &:nth-of-type(2)
-                {
-                    padding-right: 140px;
-                    display: flex;
-                    gap: 10px;
-                    align-items: baseline;
-                    a img
-                    {
-                        width: 50px;
-                    }
-                }
-
-                div
-                {
-                    display: flex;
-                    gap: 10px;
-                    margin-bottom: 20px;
-
-                }
-
-            }
-
-            .contact_links
-            {
-                margin-bottom: 100px;
-                div:nth-of-type(2)
                 {
                     display: block;
                 }
             }
-
         }
-
     }
-
-    
 }
 
 

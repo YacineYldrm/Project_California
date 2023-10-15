@@ -1,0 +1,85 @@
+@media screen and (max-width: 800px) {
+  .main_wrapper .product_info_wrapper img:nth-of-type(1) {
+    width: 45%;
+    left: 47vw;
+    transform: translateY(-500px);
+  }
+  .main_wrapper .product_info_wrapper img:nth-of-type(2) {
+    width: 35%;
+    left: 7vw;
+    transform: translateY(-240px);
+  }
+  .main_wrapper .product_info_wrapper img:nth-of-type(3) {
+    width: 35%;
+    left: 55vw;
+    transform: translateY(330px);
+  }
+  .main_wrapper .product_info_wrapper img:nth-of-type(4) {
+    width: 45%;
+    left: 7vw;
+    transform: translateY(400px);
+  }
+  .main_wrapper .product_info_wrapper img:nth-of-type(5) {
+    width: 45%;
+    left: 46vw;
+    transform: translateY(600px);
+    z-index: 1;
+  }
+  .main_wrapper .product_info_wrapper img:nth-of-type(6) {
+    width: 35%;
+    left: 0vw;
+    transform: translateY(740px);
+  }
+  .main_wrapper .product_info_wrapper img:nth-of-type(7) {
+    width: 60%;
+    left: 18vw;
+    transform: translateY(1220px);
+  }
+  .main_wrapper .design_story_wrapper .design_image_wrapper img:nth-of-type(1) {
+    width: 90vh;
+    transform: translateY(60px);
+  }
+  .main_wrapper .design_story_wrapper .design_image_wrapper img:nth-of-type(2) {
+    width: 40vw;
+    left: 15vw;
+    transform: translateY(150%);
+  }
+  .main_wrapper .animation_rotation_wrapper img {
+    width: 82vw;
+    top: 9%;
+    left: 45vw;
+  }
+  .main_wrapper .second_design_story .second_image_wrapper img:nth-of-type(1) {
+    width: 90vw;
+    transform: translateY(-192px);
+    left: 0;
+  }
+  .main_wrapper .second_design_story .second_image_wrapper img:nth-of-type(2) {
+    width: 40vw;
+    left: 37vw;
+    transform: translateY(45vh);
+  }
+  .footer_wrapper .footer_info_animation_wrapper .scrolling_text {
+    width: 2000px;
+    left: -9vw;
+    bottom: 15%;
+    transform: rotate(0deg);
+  }
+  .footer_wrapper .footer_info_animation_wrapper .scrolling_text div {
+    padding-top: 11px;
+    height: 70px;
+  }
+  .footer_wrapper .footer_info_animation_wrapper .scrolling_text div p {
+    font-size: 2rem;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(-150px);
+    }
+    100% {
+      transform: translateX(50px);
+    }
+  }
+}
+
+/*# sourceMappingURL=media800.css.map */

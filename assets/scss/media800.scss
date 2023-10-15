@@ -1,0 +1,160 @@
+@use './mixin.scss';
+
+@media screen and (max-width: 800px)
+
+{
+    
+    .main_wrapper
+    {
+
+        //-------------------------------
+        // 
+        // MAIN / ACTION IMAGES
+        // 
+        //-------------------------------
+        
+        .product_info_wrapper
+        {
+            img 
+            {
+                &:nth-of-type(1)
+                {
+                    @include mixin.mediaImageStyle(45%, 47vw, -500px);
+                }
+
+                &:nth-of-type(2)
+                {
+                    @include mixin.mediaImageStyle(35%, 7vw, -240px);
+                }
+
+                &:nth-of-type(3)
+                {
+                    @include mixin.mediaImageStyle(35%, 55vw, 330px);
+                }
+
+                &:nth-of-type(4)
+                {
+                    @include mixin.mediaImageStyle(45%, 7vw, 400px);
+                }
+
+                &:nth-of-type(5)
+                {
+                    @include mixin.mediaImageStyle(45%, 46vw, 600px);
+                    z-index: 1;
+                }
+
+                &:nth-of-type(6)
+                {
+                    @include mixin.mediaImageStyle(35%, 0vw, 740px);
+                }
+
+                &:nth-of-type(7)
+                {
+                    @include mixin.mediaImageStyle(60%, 18vw, 1220px);
+                }
+                
+            }
+        }
+
+        //-------------------------------
+        // 
+        // MAIN / DESIGN STORY
+        // 
+        //-------------------------------
+
+        .design_story_wrapper
+        {
+
+            .design_image_wrapper
+            {
+                img:nth-of-type(1)
+                {
+                    width: 90vh;
+                    transform: translateY(60px);
+                }
+
+                img:nth-of-type(2)
+                {
+                    width: 40vw;
+                    left: 15vw;
+                    transform: translateY(150%);
+                }
+            }
+        }
+
+        .animation_rotation_wrapper 
+        {
+            img 
+            {
+                width: 82vw;
+                top: 9%;
+                left: 45vw;
+            }
+        }
+
+        .second_design_story
+        {
+            .second_image_wrapper
+            {
+                img:nth-of-type(1) 
+                {
+                    width: 90vw;
+                    transform: translateY(-192px);
+                    left: 0;
+                }
+
+                img:nth-of-type(2) 
+                {
+                    width: 40vw;
+                    left: 37vw;
+                    transform: translateY(45vh);
+                }
+            }
+        }
+    }
+
+    //-------------------------------
+    // 
+    // FOOTER / ANIMATION
+    // 
+    //-------------------------------
+
+    .footer_wrapper
+    {
+        .footer_info_animation_wrapper
+        {
+            .scrolling_text
+            {
+                width: 2000px;
+                left: -9vw;
+                bottom: 15%;
+                transform: rotate(0deg);
+
+                div 
+                {
+                    padding-top: 11px;
+                    height: 70px;
+
+                    p
+                    {
+                        font-size: 2rem;
+                    }
+                }
+
+                @keyframes scroll 
+                {
+                    0%
+                    {
+                        transform: translateX(-150px);  
+                    }
+
+                    100%
+                    {
+                        transform: translateX(50px);  
+                    }
+                
+                }
+            }
+        }
+    } 
+}
