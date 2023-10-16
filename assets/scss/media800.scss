@@ -6,6 +6,7 @@
     
     .main_wrapper
     {
+        
 
         //-------------------------------
         // 
@@ -84,6 +85,7 @@
 
         .animation_rotation_wrapper 
         {
+            overflow: hidden;
             img 
             {
                 width: 82vw;
@@ -121,6 +123,8 @@
 
     .footer_wrapper
     {
+        padding-bottom: 100px;
+        overflow-x: hidden;
         .footer_info_animation_wrapper
         {
             .scrolling_text
